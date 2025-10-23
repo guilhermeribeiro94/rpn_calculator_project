@@ -1,6 +1,6 @@
 # 🧮 RPN Calculator v2.0
 
-### 📖 Overview
+## 📖 Overview
 This project is a **Reverse Polish Notation (RPN) Calculator** implemented in **Python** with a clean, modern interface using **CustomTkinter**.
 
 The calculator evaluates arithmetic expressions in **postfix notation**, using a **stack-based algorithm** that strictly follows the **LIFO (Last In, First Out)** principle.
@@ -28,9 +28,9 @@ Version **2.0** introduces a redesigned UI, rounded buttons, modern dark theme, 
 ---
 
 ## 🧩 Technologies Used
-- **Python 3.11+**
-- **CustomTkinter** – Modern, themeable GUI framework
-- **Tkinter** (base framework)
+- **Python**
+- **Tkinter** (base framework v1.0)
+- **CustomTkinter** (base framework v2.0)
 
 ---
 
