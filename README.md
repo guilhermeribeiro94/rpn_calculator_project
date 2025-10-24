@@ -6,7 +6,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completed-green?style=for-the-badge">
 
-  <img src="https://img.shields.io/badge/Programming Language-Python-white?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Programming Language-Python-white?style=for-the-badge">
   <img src="https://img.shields.io/badge/Interface-CustomTkinter-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
 </p>
@@ -40,7 +40,7 @@
 
 ## 📊 Project Status
 
-✅ **Completed and Stable (v2.0)**   
+✅ **Completed**   
 
 ---
 
