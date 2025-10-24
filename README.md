@@ -10,7 +10,7 @@
 <!-- BADGES -->
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completed-4CC2FF?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Python-3.11+-yellow?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python">
   <img src="https://img.shields.io/badge/Interface-CustomTkinter-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
 </p>
@@ -33,9 +33,9 @@
 
 ## 📘 Project Description
 
-**RPN Calculator v2.0** is a modern Python-based calculator using **Reverse Polish Notation (RPN)** — a mathematical method where operators follow operands, eliminating the need for parentheses.
+**RPN Calculator v2.0** is a Python-based calculator using **Reverse Polish Notation (RPN)** — a mathematical method where operators follow operands, eliminating the need for parentheses.
 
-🔹 **Highlights of version 2.0:**  
+🔹 **Highlights of version**  
 - Dark mode UI built with **CustomTkinter** 🌙  
 - Rounded grid-based buttons  
 - Dual display: **Expression** and **Result**  
@@ -46,8 +46,7 @@
 
 ## 📊 Project Status
 
-✅ **Completed and Stable (v2.0)**  
-🚀 Future updates: floating-point support, scientific functions, and history tracking  
+✅ **Completed and Stable (v2.0)**   
 
 ---
 
@@ -69,7 +68,7 @@
 > ```
 > Input: 5 3 +
 > Stack: [8]
-> Result: 8
+> Output: 8
 > ```
 
 ---
@@ -79,5 +78,5 @@
 ```bash
 git clone https://github.com/yourusername/rpn-calculator.git
 cd rpn-calculator
-pip install customtkinter pillow
+pip install customtkinter
 python rpn_calculator_v2.0.py
