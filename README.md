@@ -99,7 +99,7 @@ rpn_calculator_v2.0.py
 
 ## 👨‍💻 Developer
 
-| Name 
+| Name |
 |------|
 | **Guilherme Aurélio Destefano Ribeiro** |
 
