@@ -25,10 +25,8 @@
 3. [⚙️ Features & Demonstration](#️-features--demonstration)  
 4. [🔗 Access the Project](#-access-the-project)  
 5. [🧩 Technologies Used](#-technologies-used)  
-6. [🤝 Contributors](#-contributors)  
-7. [👨‍💻 Developers](#-developers)  
-8. [📝 License](#-license)  
-9. [🇧🇷 Versão em Português](#-versão-em-português)
+6. [👨‍💻 Developer](#-developer)  
+7. [📝 License](#-license)  
 
 ---
 
@@ -37,7 +35,7 @@
 **RPN Calculator v2.0** is a Python-based calculator using **Reverse Polish Notation (RPN)** — a mathematical method where operators follow operands, eliminating the need for parentheses.
 
 🔹 **Highlights of version**  
-- Dark mode UI built with **CustomTkinter** 🌙  
+- Dark mode UI built with **CustomTkinter**  
 - Rounded grid-based buttons  
 - Dual display: **Expression** and **Result**  
 - True stack-based logic (LIFO behavior)  
@@ -71,7 +69,6 @@
 
 ## 🔗 Access the Project
 
-```bash
 1. Clone the source code:
 
 ```sh
@@ -89,3 +86,29 @@ pip install customtkinter
 ```
 rpn_calculator_v2.0.py
 ```
+
+## 🧩 Technologies Used
+
+| Technology | Description |
+|-------------|--------------|
+| **Python** | Core programming language |
+| **Tkinter** | Base framework |
+| **CustomTkinter** | Modern library |
+
+---
+
+## 👨‍💻 Developer
+
+| Name 
+|------|
+| **Guilherme Aurélio Destefano Ribeiro** |
+
+🔗 [LinkedIn](https://www.linkedin.com/in/-guilherme-ribeiro-)
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License** — see [LICENSE.md](LICENSE.md) for more information.
+
+---
