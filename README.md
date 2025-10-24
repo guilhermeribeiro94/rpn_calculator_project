@@ -1,17 +1,12 @@
-<!-- COVER IMAGE -->
-<p align="center">
-  <img src="A_digital_graphic_design_banner_features_the_title.png" alt="RPN Calculator v2.0 Banner" width="600px">
-</p>
-
 <h1 align="center">🧮 RPN Calculator v2.0</h1>
 
 ---
 
 <!-- BADGES -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Completed-4CC2FF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Completed-green?style=for-the-badge">
 
-  <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Programming Language-Python-white?style=for-the-badge&logo=python">
   <img src="https://img.shields.io/badge/Interface-CustomTkinter-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
 </p>
