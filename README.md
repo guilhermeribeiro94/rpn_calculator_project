@@ -10,6 +10,7 @@
 <!-- BADGES -->
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completed-4CC2FF?style=for-the-badge">
+
   <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python">
   <img src="https://img.shields.io/badge/Interface-CustomTkinter-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
@@ -59,12 +60,7 @@
 - 🕹️ Functional keys: `CE`, `C`, `DEL`, `+/-`, `space`, `=`  
 - 🎨 Dark mode theme with **CustomTkinter**
 
-### Demo
-<p align="center">
-  <img src="A_digital_screenshot_showcases_a_Reverse_Polish_No.png" alt="RPN Calculator UI Preview" width="500px">
-</p>
-
-> Example:
+### Example
 > ```
 > Input: 5 3 +
 > Stack: [8]
@@ -76,7 +72,20 @@
 ## 🔗 Access the Project
 
 ```bash
-git clone https://github.com/yourusername/rpn-calculator.git
-cd rpn-calculator
+1. Clone the source code:
+
+```sh
+git clone https://github.com/guilhermeribeiro94/rpn_calculator_project.git
+```
+
+2. Install customtkinter:
+
+```sh
 pip install customtkinter
-python rpn_calculator_v2.0.py
+```
+
+3. Run the file:
+
+```
+rpn_calculator_v2.0.py
+```
