@@ -1,47 +1,83 @@
-# 🧮 RPN Calculator v2.0
+<!-- COVER IMAGE -->
+<p align="center">
+  <img src="A_digital_graphic_design_banner_features_the_title.png" alt="RPN Calculator v2.0 Banner" width="600px">
+</p>
 
-## 📖 Overview
-This project is a **Reverse Polish Notation (RPN) Calculator** implemented in **Python** with a clean, modern interface using **CustomTkinter**.
-
-The calculator evaluates arithmetic expressions in **postfix notation**, using a **stack-based algorithm** that strictly follows the **LIFO (Last In, First Out)** principle.
-
-Version **2.0** introduces a redesigned UI, rounded buttons, modern dark theme, and improved input handling.
+<h1 align="center">🧮 RPN Calculator v2.0</h1>
 
 ---
 
-## ⚙️ Features
-✅ Stack-based RPN evaluation (push/pop logic)  
-✅ Supports `+`, `-`, `*`, `/` operations  
-✅ Handles invalid input and missing operands  
-✅ Dual display:
-- **Expression** (top input)
-- **Result** (bottom output)  
-✅ Functional keys:
-- `CE` → Clear Entry  
-- `C` → Clear All  
-- `DEL` → Delete last token  
-- `+/-` → Toggle sign  
-- `space` → Add spacing between numbers  
-✅ Responsive layout (grid system)  
-✅ Polished **CustomTkinter** visual design
+<!-- BADGES -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Completed-4CC2FF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Python-3.11+-yellow?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Interface-CustomTkinter-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
+</p>
 
 ---
 
-## 🧩 Technologies Used
-- **Python**
-- **Tkinter** (base framework v1.0)
-- **CustomTkinter** (base framework v2.0)
+## 🧭 Table of Contents
+
+1. [📘 Project Description](#-project-description)  
+2. [📊 Project Status](#-project-status)  
+3. [⚙️ Features & Demonstration](#️-features--demonstration)  
+4. [🔗 Access the Project](#-access-the-project)  
+5. [🧩 Technologies Used](#-technologies-used)  
+6. [🤝 Contributors](#-contributors)  
+7. [👨‍💻 Developers](#-developers)  
+8. [📝 License](#-license)  
+9. [🇧🇷 Versão em Português](#-versão-em-português)
 
 ---
 
-## 🧠 How It Works
-The calculator reads an **RPN expression**, splits it into tokens, and processes them sequentially using a **stack**.
+## 📘 Project Description
 
-1. **Numbers** are pushed to the stack.  
-2. **Operators** pop the top two numbers, perform the operation, and push the result back.
+**RPN Calculator v2.0** is a modern Python-based calculator using **Reverse Polish Notation (RPN)** — a mathematical method where operators follow operands, eliminating the need for parentheses.
 
-If the input is valid, one number remains — the final result.
+🔹 **Highlights of version 2.0:**  
+- Dark mode UI built with **CustomTkinter** 🌙  
+- Rounded grid-based buttons  
+- Dual display: **Expression** and **Result**  
+- True stack-based logic (LIFO behavior)  
+- Smart input cleaning and error handling  
 
-### Example:
-Input: 5 3 +
-Output: 8
+---
+
+## 📊 Project Status
+
+✅ **Completed and Stable (v2.0)**  
+🚀 Future updates: floating-point support, scientific functions, and history tracking  
+
+---
+
+## ⚙️ Features & Demonstration
+
+### Main Features
+- ➕ ➖ ✖️ ➗ Basic arithmetic operations  
+- 🧱 Stack logic (Push/Pop)  
+- 💡 Error handling for invalid tokens or division by zero  
+- 🕹️ Functional keys: `CE`, `C`, `DEL`, `+/-`, `space`, `=`  
+- 🎨 Dark mode theme with **CustomTkinter**
+
+### Demo
+<p align="center">
+  <img src="A_digital_screenshot_showcases_a_Reverse_Polish_No.png" alt="RPN Calculator UI Preview" width="500px">
+</p>
+
+> Example:
+> ```
+> Input: 5 3 +
+> Stack: [8]
+> Result: 8
+> ```
+
+---
+
+## 🔗 Access the Project
+
+```bash
+git clone https://github.com/yourusername/rpn-calculator.git
+cd rpn-calculator
+pip install customtkinter pillow
+python rpn_calculator_v2.0.py
