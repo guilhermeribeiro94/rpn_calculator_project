@@ -94,9 +94,7 @@ rpn_calculator_v2.0.py
 
 ## 👨‍💻 Developer
 
-| Name |
-|------|
-| **Guilherme Aurélio Destefano Ribeiro** |
+**Guilherme Aurélio Destefano Ribeiro**
 
 🔗 [LinkedIn](https://www.linkedin.com/in/-guilherme-ribeiro-)
 
