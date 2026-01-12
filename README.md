@@ -79,10 +79,6 @@ pip install customtkinter
 3. Run the file:
 
 ```
-rpn_calculator_v1.0.py
-```
-or
-```
 rpn_calculator_v2.0.py
 ```
 
