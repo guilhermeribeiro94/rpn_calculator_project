@@ -4,6 +4,57 @@ from PIL import Image
 import customtkinter as ctk
 
 
+calculation_history = []
+history_window = None
+history_text = None
+
+
+def refresh_history():
+    if history_window is None or not history_window.winfo_exists():
+        return
+    history_text.configure(state='normal')
+    history_text.delete('1.0', ctk.END)
+    entries = (f'{expression} = {result}'
+               for expression, result in reversed(calculation_history))
+    history_text.insert('1.0', '\n\n'.join(entries) or 'No calculations yet.')
+    history_text.configure(state='disabled')
+
+
+def clear_history():
+    calculation_history.clear()
+    refresh_history()
+
+
+def show_history():
+    global history_window, history_text
+    if history_window is not None and history_window.winfo_exists():
+        history_window.deiconify()
+        history_window.lift()
+        history_window.focus_set()
+        return
+
+    history_window = ctk.CTkToplevel(interface)
+    history_window.title('Calculation History')
+    history_window.geometry('360x400')
+    history_window.minsize(300, 250)
+    history_window.configure(fg_color='#202020')
+    history_window.transient(interface)
+    history_window.grid_columnconfigure(0, weight=1)
+    history_window.grid_rowconfigure(1, weight=1)
+
+    ctk.CTkLabel(history_window, text='History', text_color='#FFFFFF',
+                 font=('Segoe UI', 20, 'bold')).grid(
+                     row=0, column=0, sticky='w', padx=16, pady=(12, 4))
+    history_text = ctk.CTkTextbox(history_window, wrap='word',
+                                 fg_color='#323232', text_color='#FFFFFF',
+                                 font=('Segoe UI', 16))
+    history_text.grid(row=1, column=0, sticky='nsew', padx=16, pady=8)
+    ctk.CTkButton(history_window, text='Clear history', command=clear_history,
+                  fg_color='#323232', hover_color='#3B3B3B').grid(
+                      row=2, column=0, sticky='ew', padx=16, pady=(4, 16))
+    refresh_history()
+
+
 # Function to evaluate the RPN expression
 def rpn_calculator():
     # Get the expression from the display and split it into tokens
@@ -82,6 +133,8 @@ def calculator_buttons(button_text):
             result = rpn_calculator()
             display_2.delete(0, ctk.END)
             display_2.insert(ctk.END, str(result))
+            calculation_history.append((display_1.get().strip(), result))
+            refresh_history()
         except ValueError as e:
             display_2.delete(0, ctk.END)
             display_2.insert(ctk.END, f'Error: {e}')
@@ -106,7 +159,8 @@ interface.resizable(False, False)
 # Create a display area for the history
 history_icon = ctk.CTkImage(dark_image=Image.open('history_icon.png'), size=(50, 40))
 history_button = ctk.CTkButton(interface,text='', image=history_icon, anchor='e', width=50, height=40,
-                               fg_color='#202020', text_color='#FFFFFF', hover_color='#323232')
+                               fg_color='#202020', text_color='#FFFFFF', hover_color='#323232',
+                               command=show_history)
 history_button.grid(row=0, column=0, columnspan=4, sticky='e', padx=0, pady=0)
 
 # Create a display area for the expression
