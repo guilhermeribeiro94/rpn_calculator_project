@@ -105,3 +105,33 @@ rpn_calculator_v2.0.py
 This project is licensed under the **MIT License** — see [LICENSE.md](LICENSE.md) for more information.
 
 ---
+
+## Project structure
+
+- `rpn_calculator_v2.0.py`: application entry point.
+- `calculator.py`: RPN evaluation, independent of the interface.
+- `app.py`: calculator window, keypad, and input handling.
+- `history.py`: session history and its window.
+- `tests/`: calculation and interface regression tests.
+
+Start the application with:
+
+```sh
+python rpn_calculator_v2.0.py
+```
+
+The history is kept for the current session. Close the application to discard it.
+
+Run the calculation tests without a graphical display:
+
+```sh
+python -m unittest discover -s tests -p test_calculator.py -v
+```
+
+Run all tests with a graphical display available:
+
+```sh
+python -m unittest discover -s tests -v
+```
+
+On a headless Linux machine, run the full suite through `xvfb-run -a`.
