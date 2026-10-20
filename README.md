@@ -80,10 +80,10 @@ python rpn_calculator_v2.0.py
 Separate operands and operators with spaces, then press `=`. For example:
 
 ```text
-5 3 +          → 8
+5 3 + → 8
 5 1 2 + 4 * + 3 - → 14
-7 2 /          → 3
--7 2 /         → -3
+7 2 / → 3
+-7 2 / → -3
 ```
 
 | Button | Action |
@@ -158,7 +158,6 @@ The tests cover arithmetic, invalid expressions, the existing division-by-zero e
 | Technology | Role |
 | --- | --- |
 | Python | Application and calculation logic |
-| Tkinter | Base GUI framework |
 | CustomTkinter | Interface widgets |
 | Pillow | History icon loading |
 | unittest | Calculation and interface tests |
