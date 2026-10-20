@@ -19,7 +19,9 @@ class CalculatorApp(ctk.CTk):
         self.resizable(False, False)
 
         self.history_icon = ctk.CTkImage(
-            dark_image=Image.open(Path(__file__).with_name("history_icon.png")),
+            dark_image=Image.open(
+                Path(__file__).resolve().parent / "assets" / "history_icon.png"
+            ),
             size=(50, 40),
         )
         self.history_button = ctk.CTkButton(

@@ -70,16 +70,17 @@
 git clone https://github.com/guilhermeribeiro94/rpn_calculator_project.git
 ```
 
-2. Install customtkinter:
+2. Enter the project directory and install the dependencies (preferably in a virtual environment):
 
 ```sh
-pip install customtkinter
+cd rpn_calculator_project
+python -m pip install -r requirements.txt
 ```
 
-3. Run the file:
+3. Run the application:
 
-```
-rpn_calculator_v2.0.py
+```sh
+python rpn_calculator_v2.0.py
 ```
 
 ## 🧩 Technologies Used
@@ -112,6 +113,8 @@ This project is licensed under the **MIT License** — see [LICENSE.md](LICENSE.
 - `calculator.py`: RPN evaluation, independent of the interface.
 - `app.py`: calculator window, keypad, and input handling.
 - `history.py`: session history and its window.
+- `assets/`: images used by the interface.
+- `requirements.txt`: Python dependencies.
 - `tests/`: calculation and interface regression tests.
 
 Start the application with:
