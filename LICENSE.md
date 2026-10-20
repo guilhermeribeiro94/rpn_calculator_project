@@ -1,9 +1,5 @@
+MIT License
 
----
-
-## ⚖️ **MIT LICENSE**
-
-```markdown
 Copyright (c) 2025 Guilherme Aurélio Destefano Ribeiro
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

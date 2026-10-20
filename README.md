@@ -1,140 +1,174 @@
-<h1 align="center">🧮 RPN Calculator v2.0</h1>
+# 🧮 RPN Calculator v2.0
 
----
+A desktop calculator built with Python and CustomTkinter. It evaluates integer expressions in **Reverse Polish Notation (RPN)**, where operators follow their operands.
 
-<!-- BADGES -->
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Completed-green?style=for-the-badge">
+## Table of contents
 
-  <img src="https://img.shields.io/badge/Programming Language-Python-white?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Interface-CustomTkinter-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
-</p>
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [History](#history)
+- [Limitations](#limitations)
+- [Project structure](#project-structure)
+- [Tests](#tests)
+- [Technologies](#technologies)
+- [Developer](#developer)
+- [License](#license)
 
----
+## Features
 
-## 🧭 Table of Contents
+- Addition, subtraction, multiplication, and integer division.
+- Stack-based RPN evaluation.
+- Separate expression and result displays.
+- Dark interface with an on-screen keypad.
+- Session history accessible through the clock icon.
+- Error messages for invalid tokens, missing operands, and extra operands.
 
-1. [📘 Project Description](#-project-description)  
-2. [📊 Project Status](#-project-status)  
-3. [⚙️ Features & Demonstration](#️-features--demonstration)  
-4. [🔗 Access the Project](#-access-the-project)  
-5. [🧩 Technologies Used](#-technologies-used)  
-6. [👨‍💻 Developer](#-developer)  
-7. [📝 License](#-license)  
+## Requirements
 
----
+- Python with `pip` and `venv`; development and tests have been validated with **Python 3.12**.
+- Tkinter/Tk support and a graphical display to use the interface.
+- Python dependencies listed in `requirements.txt`: CustomTkinter and Pillow.
 
-## 📘 Project Description
+Check Tkinter with:
 
-**RPN Calculator v2.0** is a Python-based calculator using **Reverse Polish Notation (RPN)** — a mathematical method where operators follow operands, eliminating the need for parentheses.
+```sh
+python -m tkinter
+```
 
-🔹 **Highlights of version**  
-- Dark mode UI built with **CustomTkinter**  
-- Rounded grid-based buttons  
-- Dual display: **Expression** and **Result**  
-- True stack-based logic (LIFO behavior)  
-- Smart input cleaning and error handling  
+This should open a small test window. If Tkinter is missing, install Tk support for your Python distribution. On Debian/Ubuntu with the system Python, the package is usually `python3-tk`; `python3-venv` may also be needed. Tkinter is not installed through `pip`.
 
----
+Use `python3` instead of `python` below if that is how your Python installation is named.
 
-## 📊 Project Status
+## Installation
 
-✅ **Completed**   
-
----
-
-## ⚙️ Features & Demonstration
-
-### Main Features
-- ➕ ➖ ✖️ ➗ Basic arithmetic operations  
-- 🧱 Stack logic (Push/Pop)  
-- 💡 Error handling for invalid tokens or division by zero  
-- 🕹️ Functional keys: `CE`, `C`, `DEL`, `+/-`, `space`, `=`  
-- 🎨 Dark mode theme with **CustomTkinter**
-
-### Example
-> ```
-> Input: 5 3 +
-> Stack: [8]
-> Output: 8
-> ```
-
----
-
-## 🔗 Access the Project
-
-1. Clone the source code:
+Clone the repository and create a virtual environment:
 
 ```sh
 git clone https://github.com/guilhermeribeiro94/rpn_calculator_project.git
+cd rpn_calculator_project
+python -m venv .venv
 ```
 
-2. Enter the project directory and install the dependencies (preferably in a virtual environment):
+Activate it on Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Or on macOS/Linux:
 
 ```sh
-cd rpn_calculator_project
+source .venv/bin/activate
+```
+
+Install the dependencies:
+
+```sh
 python -m pip install -r requirements.txt
 ```
 
-3. Run the application:
+## Usage
+
+With the virtual environment activated, start the application:
 
 ```sh
 python rpn_calculator_v2.0.py
 ```
 
-## 🧩 Technologies Used
+Separate operands and operators with spaces, then press `=`. For example:
 
-| Technology | Description |
-|-------------|--------------|
-| **Python** | Core programming language |
-| **Tkinter** | Base framework |
-| **CustomTkinter** | Modern library |
+```text
+5 3 +          → 8
+5 1 2 + 4 * + 3 - → 14
+7 2 /          → 3
+-7 2 /         → -3
+```
 
----
+| Button | Action |
+| --- | --- |
+| `CE` | Clear the expression. |
+| `C` | Clear the expression and result; keep history. |
+| `DEL` | Remove the last token. |
+| `+/-` | Toggle the sign of the last integer token. |
+| `space` | Add a separator between tokens. |
+| `=` | Evaluate the expression and record a successful calculation. |
 
-## 👨‍💻 Developer
+## History
 
-**Guilherme Aurélio Destefano Ribeiro**
+Click the clock icon to open the history window. Successful calculations appear with their expression and result, newest first. The list updates while the window is open.
 
-🔗 [LinkedIn](https://www.linkedin.com/in/guilhermedestefanoribeiro)
+- Closing and reopening the history window preserves its entries.
+- **Clear history** removes all entries without clearing the calculator displays.
+- Failed calculations are not recorded.
+- History is held in memory for the current session and is discarded when the application closes.
 
----
+## Limitations
 
-## 📝 License
-
-This project is licensed under the **MIT License** — see [LICENSE.md](LICENSE.md) for more information.
-
----
+- Operands must be integers; decimal input is not supported.
+- Division truncates toward zero: `7 2 /` gives `3`, and `-7 2 /` gives `-3`.
+- Division by zero currently raises an exception that the interface does not convert into a display error message. This is a known issue.
+- The application is a desktop GUI and requires a display. It does not provide a web interface.
 
 ## Project structure
 
-- `rpn_calculator_v2.0.py`: application entry point.
-- `calculator.py`: RPN evaluation, independent of the interface.
-- `app.py`: calculator window, keypad, and input handling.
-- `history.py`: session history and its window.
-- `assets/`: images used by the interface.
-- `requirements.txt`: Python dependencies.
-- `tests/`: calculation and interface regression tests.
-
-Start the application with:
-
-```sh
-python rpn_calculator_v2.0.py
+```text
+rpn_calculator_project/
+├── rpn_calculator_v2.0.py  # Application entry point
+├── app.py                 # Window, keypad, and input handling
+├── calculator.py          # RPN evaluation independent of the interface
+├── history.py             # Session history and its window
+├── assets/
+│   └── history_icon.png
+├── tests/
+│   ├── test_calculator.py  # Evaluation regression tests
+│   └── test_app.py         # Integration tests with real widgets
+├── requirements.txt
+├── README.md
+└── LICENSE.md
 ```
 
-The history is kept for the current session. Close the application to discard it.
+## Tests
 
-Run the calculation tests without a graphical display:
+Run these commands from the repository root with the virtual environment activated.
+
+Calculation tests do not require a display:
 
 ```sh
 python -m unittest discover -s tests -p test_calculator.py -v
 ```
 
-Run all tests with a graphical display available:
+Run all tests, including the interface tests, with a graphical display available:
 
 ```sh
 python -m unittest discover -s tests -v
 ```
 
-On a headless Linux machine, run the full suite through `xvfb-run -a`.
+On a headless Linux machine with Xvfb and `xauth` installed:
+
+```sh
+xvfb-run -a python -m unittest discover -s tests -v
+```
+
+The tests cover arithmetic, invalid expressions, the existing division-by-zero exception, input controls, and the history window lifecycle. The division-by-zero test preserves the known exception behavior; it does not indicate that the interface handles it.
+
+## Technologies
+
+| Technology | Role |
+| --- | --- |
+| Python | Application and calculation logic |
+| Tkinter | Base GUI framework |
+| CustomTkinter | Interface widgets |
+| Pillow | History icon loading |
+| unittest | Calculation and interface tests |
+
+## Developer
+
+**Guilherme Aurélio Destefano Ribeiro**
+
+[LinkedIn](https://www.linkedin.com/in/guilhermedestefanoribeiro)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
